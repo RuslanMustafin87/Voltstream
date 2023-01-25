@@ -1,0 +1,123 @@
+@import "./bootstrap.scss";
+:root {
+	--font-light: #f2f2f2;
+	--font-dark: #333333;
+	--font-dark-small: #4f4f4f;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--font-light);
+}
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.custom-container {
+	@include make-container();
+	background: linear-gradient(
+		80.5deg,
+		#83a4bd 11.55%,
+		#a5a2b3 24.51%,
+		#ba929b 33.33%,
+		#bd8689 39.89%,
+		#c46f6a 47.85%,
+		#c65857 55.62%,
+		#bf4145 65.14%,
+		#9c2e37 75.49%,
+		#7a262e 84.66%,
+		#5b1e23 95.55%,
+		#421f23 103.99%,
+		#2d1c22 111.11%
+	);
+	// padding: 0 clamp(3.125rem, 4.72vw, 8.75rem);
+	padding: 0 50px;
+	height: 100vh;
+}
+
+.nav-link {
+	margin-right: clamp(1.875rem, 3.5vw, 3.125rem);
+	white-space: nowrap;
+	font-size: clamp(0.8125rem, 1.5vw, 1.125rem);
+	color: var(--font-light);
+	@include media-breakpoint-down(lg) {
+		font-size: 14px;
+	}
+	@include media-breakpoint-down(md) {
+		color: var(--font-dark-small);
+	}
+	&.active {
+		color: var(--font-light) !important;
+		@include media-breakpoint-down(md) {
+			color: var(--font-dark) !important;
+		}
+	}
+	&:hover {
+		color: var(--font-light);
+		@include media-breakpoint-down(md) {
+			color: var(--font-dark);
+		}
+	}
+}
+
+.navbar-brand {
+	margin-right: min(5vw, 5rem);
+	@include media-breakpoint-between(md, lg) {
+		display: none;
+	}
+}
+
+.phone {
+	margin: 0;
+    width: fit-content;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	&__number {
+		font-size: 1.125rem;
+		line-height: 1.8rem;
+		font-weight: 600;
+		color: var(--font-light);
+        @include media-breakpoint-down(md) {
+            color: var(--font-dark-small);
+        }
+	}
+
+	&__text {
+		margin: 0;
+		white-space: nowrap;
+		font-size: 0.8125rem;
+		line-height: 1.3rem;
+		font-weight: 500;
+		color: var(--font-light);
+        @include media-breakpoint-down(md) {
+            color: var(--font-dark-small);
+        }
+	}
+}
+
+#phoneSvg {
+	fill: var(--font-light);
+    align-self: center;
+	@include media-breakpoint-down(md) {
+		fill: var(--font-dark-small);
+	}
+}
+
+.navbar-toggler {
+	outline: 0;
+	border: 0;
+	padding: 0;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.offcanvas-header  {
+    justify-content: end;
+}
