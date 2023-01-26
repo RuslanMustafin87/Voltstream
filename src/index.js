@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import "./scss/main.scss";
+import "./main.scss";
 import "../node_modules/bootstrap/js/dist/collapse.js";
 import "../node_modules/bootstrap/js/dist/offcanvas";
 // import "../node_modules/bootstrap/dist/js/bootstrap.min";

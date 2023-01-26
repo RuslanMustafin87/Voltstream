@@ -1,0 +1,41 @@
+:root {
+	--font-light: #f2f2f2;
+	--font-dark: #333333;
+	--font-dark-small: #4f4f4f;
+	--button-color: #F2323D;
+	--button-color-hover: #C9000C;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--font-light);
+}
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	background: linear-gradient(
+		80.5deg,
+		#83a4bd 11.55%,
+		#a5a2b3 24.51%,
+		#ba929b 33.33%,
+		#bd8689 39.89%,
+		#c46f6a 47.85%,
+		#c65857 55.62%,
+		#bf4145 65.14%,
+		#9c2e37 75.49%,
+		#7a262e 84.66%,
+		#5b1e23 95.55%,
+		#421f23 103.99%,
+		#2d1c22 111.11%
+	);
+}
+
+.custom-container {
+	@include make-container();
+	width: min(90%, 1280px);
+	height: 100vh;
+	@include media-breakpoint-down(sm) {
+		width: 95%;
+	}
+}
