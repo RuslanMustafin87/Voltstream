@@ -4,16 +4,24 @@
 	--font-dark-small: #4f4f4f;
 	--button-color: #F2323D;
 	--button-color-hover: #C9000C;
+
+	font-family: "Gilroy";
+	font-weight: normal;
 }
 body {
 	margin: 0;
 	padding: 0;
 	color: var(--font-light);
 }
+p {
+	margin-bottom: 0;
+}
+a{
+	text-decoration: none;
+}
 .wrapper {
 	width: 100%;
 	overflow: hidden;
-	height: 100vh;
 	background: linear-gradient(
 		80.5deg,
 		#83a4bd 11.55%,
@@ -33,9 +41,24 @@ body {
 
 .custom-container {
 	@include make-container();
-	width: min(90%, 1280px);
-	height: 100vh;
-	@include media-breakpoint-down(sm) {
-		width: 95%;
+	width: 83.33%;
+	@include media-breakpoint-up(md) {
+		width: min(88.37%, 72.5rem);
+	}
+	@include media-breakpoint-up(sm) {
+		width: 82.63%;
+	}
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 130%;
+	@include media-breakpoint-between(md, lg){
+		font-size: 1.5rem;
+	}
+	@include media-breakpoint-down(md){
+		font-size: 1.375rem;
+		text-align: center;
 	}
 }

@@ -1,0 +1,185 @@
+.hero {
+    display: flex;
+    padding-top: clamp(3.125rem, 6.25vw, 5.625rem);
+    padding-bottom: clamp(2.5rem, 6.6vw, 5.9375rem);
+    
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+    &__left {
+        flex: 1 0 50%;
+        @include media-breakpoint-down(md) {
+            flex: 1 0 100%;
+            text-align: center;
+        }
+    }
+
+    &__right {
+        position: relative;
+        flex: 1 0 50%;
+        @include media-breakpoint-down(md) {
+            // flex: 1 0 100%;
+            display: none;
+        }
+    }
+
+    &__text-main {
+        margin-bottom: 0.9375rem;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(lg){
+            margin-bottom: 1.25rem;
+
+            font-size: clamp(1.5rem, 2.5vw,  2.25rem);
+            line-height: clamp(1.5rem, 3.25vw, 2.925rem);
+        }
+        @include media-breakpoint-up(sm){
+            font-size: 1.5rem;
+            line-height: 1.95rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 1.875rem;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(sm){
+            margin-bottom: 1.5625rem;
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+
+        @include media-breakpoint-up(lg){
+            margin-bottom: 3.125rem;
+            font-size: clamp(1rem, 1.4vw, 1.25rem);
+            line-height: clamp(1.6rem, 2.22vw, 2rem);
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        transform: scale(1.1) translate(5%, 20%);
+        @include media-breakpoint-down(lg){
+            transform: scale(1.1) translate(-2%, 43%);
+        }
+    }
+
+    &__button-link {
+        display: block;
+        margin: 0 0 6.25rem 0;
+        padding: 20px 32px 20px 32px;
+        width: fit-content;
+        border-radius: 0.375rem;
+        background-color: var(--button-color);
+        color: var(--font-light);
+        font-family: 'Gilroy';
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        @include media-breakpoint-down(lg){
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+        }
+        @include media-breakpoint-down(md){
+            margin: 0 auto 1.875rem auto;
+        }
+    }
+
+    &__button-link:hover {
+        color: var(--font-light);
+        background-color: var(--button-color-hover);
+    }
+
+    &__logo {
+        position:absolute;
+        right: 7%;
+        top: 8%;
+        visibility: hidden;
+        width: 6.75rem;
+        height: 2.3125rem;
+        @include media-breakpoint-between(md, lg){
+            visibility: visible;
+        }
+    }
+
+    &__pic-mobile{
+        display: none;
+        padding: 3.75rem 0 3.125rem 0;
+        @include media-breakpoint-down(md){
+            display: block;
+        }
+    }
+
+    &__pic2 {
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+    }
+}
+
+.features{
+    display: flex;
+
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+        gap: 1.875rem;
+        padding: 2.5rem 2rem 2.5rem 2rem;
+        width: fit-content;
+        margin: auto;
+        // height: 415px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    &__item {
+        display: flex;
+        width: calm(7.5rem, 13.88vw, 12.5rem);
+        height: 5.625rem;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0.9375rem 0 0.9375rem;
+        border-left: 1px solid var(--font-light);
+        @include media-breakpoint-between(md, lg){
+            width: 7.5rem;
+            padding: 0 0.625rem 0 0.625rem;
+            height: 3.4375rem;
+        }
+        @include media-breakpoint-down(md) {
+            width: fit-content;
+        }
+    }
+    &__icon {
+        width: clamp(1.0625rem, 2.08vw, 1.875rem);
+        height: clamp(1.0625rem, 2.08vw, 1.875rem);
+        @include media-breakpoint-between(md, lg){
+            width: 1.0625rem;
+            height: 1.0625rem;
+        }
+        @include media-breakpoint-down(md) {
+            width: 1.875rem;
+            height: 1.875rem;
+        }
+    }
+    &__text {
+        font-size: clamp(0.6875rem, 1.25vw, 1.125rem);
+        line-height: 1.35rem;
+        @include media-breakpoint-between(md, lg){
+            font-size: 11px;
+            line-height: 13.2px;
+        }
+        @include media-breakpoint-down(md) {
+            text-align: left;
+            font-size: 1.125rem;
+            line-height: 1.35rem;
+        }
+    }
+
+}
