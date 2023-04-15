@@ -1,2 +1,45 @@
 section.about-us
-    h1.about-us__title Специализируемся <br>на установке заземления <br>по направлениям
+    .about-us__container
+        h1.about-us__title Специализируемся <br>на установке заземления <br>по направлениям
+        .about-us__content(class='grid')
+            .about-us__item(class='g-col-2 g-col-md-1')
+                picture
+                    source(srcset=require("../../images/mall.avif") type="image/avif")
+                    source(srcset=require("../../images/mall.webp") type="image/webp")
+                    img.about-us__img(src=require("../../images/mall.png") alt="mall")
+                .about-us__item-content
+                    h2.about-us__item-title Торговые центры
+                    ul.about-us__item-list
+                        li Садовый центр Дарвин
+                        li OBI
+                        li Тц Вешняки
+                        li ТЦ Любимый Мичуринский проспект
+            .about-us__item(class='g-col-2 g-col-md-1')
+                picture
+                    source(srcset=require("../../images/private-house.avif") type="image/avif")
+                    source(srcset=require("../../images/private-house.webp") type="image/webp")
+                    img.about-us__img(src=require('../../images/private-house.png') alt='private-house')
+                .about-us__item-content
+                    h2.about-us__item-title Частные дома
+                    p.about-us__item-text Установили заземления и молние защиту для более 2000 домов
+            .about-us__item(class='g-col-2 g-col-md-1')
+                picture
+                    source(srcset=require("../../images/stock.avif") type="image/avif")
+                    source(srcset=require("../../images/stock.webp") type="image/webp")
+                    img.about-us__img(src=require('../../images/stock.png') alt='stock')
+                .about-us__item-content
+                    h2.about-us__item-title Складские комплексы
+                    p.about-us__item-text Установили заземление и молниезащиту для более 100 складских комплексов
+            .about-us__item(class='g-col-2 g-col-md-1')
+                picture
+                    source(srcset=require("../../images/factory.avif") type="image/avif")
+                    source(srcset=require("../../images/factory.webp") type="image/webp")
+                    img.about-us__img(src=require('../../images/factory.png') alt='factory')
+                .about-us__item-content
+                    h2.about-us__item-title Производственные здания
+                    // TODO сделать в однк строку в мобильной версии
+                    ul.about-us__item-list
+                        li Завод Renault
+                        li Завод Майский Чай
+                        li Завод Майский Чай
+                        li Завод KERAMA MARAZZI

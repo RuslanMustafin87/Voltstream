@@ -1,0 +1,43 @@
+section.reviews
+    .reviews__container
+        h1.reviews__title Отзывы о работе с нами
+        .reviews__buttons
+            button.reviews__button-left(class="swiper-button-prev")
+                img(src=require("../../images/icons/arrow-left.svg") alt="arrow left")
+            button.reviews__button-right(class="swiper-button-next")
+                img(src=require("../../images/icons/arrow-right.svg") alt="arrow right")
+        .clearfix
+        .swiper.swiper-reviews
+            .swiper-wrapper.swiper-reviews__wrapper
+                each val in [1, 2, 3, 4, 2, 3, 4, 1]
+                    .swiper-slide.swiper-reviews__slide
+                        picture
+                            source(srcset=require(`../../images/review-${val}.avif`) type="image/avif")
+                            source(srcset=require(`../../images/review-${val}.webp`) type="image/webp")
+                            img.swiper-reviews__img(src=require(`../../images/review-${val}.png`))
+        .reviews__buttons-2
+            button.reviews__button-left-2(class="swiper-button-prev")
+                img(src=require("../../images/icons/arrow-left.svg") alt="arrow left")
+            button.reviews__button-right-2(class="swiper-button-next")
+                img(src=require("../../images/icons/arrow-right.svg") alt="arrow right")
+
+        .photos__title Фото готовых работ
+        .photos__buttons
+            button.photos__button-left(class="swiper-button-prev-photos")
+                img(src=require("../../images/icons/arrow-left.svg") alt="arrow left")
+            button.photos__button-right(class="swiper-button-next-photos")
+                img(src=require("../../images/icons/arrow-right.svg") alt="arrow right")
+        .clearfix
+        .swiper.swiper-photos
+            .swiper-wrapper.swiper-photos__wrapper
+                each val in [1, 2, 3, 1, 3, 2, 1, 3]
+                    .swiper-slide.swiper-photos__slide
+                        picture
+                            source(srcset=require(`../../images/work-${val}.avif`) type="image/avif")
+                            source(srcset=require(`../../images/work-${val}.webp`) type="image/webp")
+                            img.swiper-photos__img(src=require(`../../images/work-${val}.png`))
+        .photos__buttons-2
+            button.photos__button-left-2(class="swiper-button-prev-photos")
+                img(src=require("../../images/icons/arrow-left.svg") alt="arrow left")
+            button.photos__button-right-2(class="swiper-button-next-photos")
+                img(src=require("../../images/icons/arrow-right.svg") alt="arrow right")

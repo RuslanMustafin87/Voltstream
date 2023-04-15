@@ -2,8 +2,8 @@
 	--font-light: #f2f2f2;
 	--font-dark: #333333;
 	--font-dark-small: #4f4f4f;
-	--button-color: #F2323D;
-	--button-color-hover: #C9000C;
+	--button-color: #f2323d;
+	--button-color-hover: #c9000c;
 
 	font-family: "Gilroy";
 	font-weight: normal;
@@ -16,12 +16,13 @@ body {
 p {
 	margin-bottom: 0;
 }
-a{
+a {
 	text-decoration: none;
 }
 .wrapper {
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 	background: linear-gradient(
 		80.5deg,
 		#83a4bd 11.55%,
@@ -50,15 +51,29 @@ a{
 	}
 }
 
+// .title {
+// 	font-size: 2rem;
+// 	font-weight: 600;
+// 	line-height: 130%;
+// 	@include media-breakpoint-between(md, lg) {
+// 		font-size: 1.5rem;
+// 	}
+// 	@include media-breakpoint-down(md) {
+// 		font-size: 1.375rem;
+// 		text-align: center;
+// 	}
+// }
+
 .title {
-	font-size: 2rem;
+	font-size: 1.25rem;
 	font-weight: 600;
 	line-height: 130%;
-	@include media-breakpoint-between(md, lg){
+	text-align: center;
+	@include media-breakpoint-up(md) {
 		font-size: 1.5rem;
+		text-align: left;
 	}
-	@include media-breakpoint-down(md){
-		font-size: 1.375rem;
-		text-align: center;
+	@include media-breakpoint-up(lg) {
+		font-size: 2rem;
 	}
 }

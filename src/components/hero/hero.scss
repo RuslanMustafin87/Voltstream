@@ -1,11 +1,16 @@
 .hero {
-    display: flex;
-    padding-top: clamp(3.125rem, 6.25vw, 5.625rem);
-    padding-bottom: clamp(2.5rem, 6.6vw, 5.9375rem);
-    
+    // display: flex;
     @include media-breakpoint-down(sm) {
         flex-direction: column;
     }
+
+    &__container {
+        @extend .custom-container;
+        display: flex;
+        padding-top: clamp(3.125rem, 6.25vw, 5.625rem);
+        padding-bottom: clamp(2.5rem, 6.6vw, 5.9375rem);
+    }
+
     &__left {
         flex: 1 0 50%;
         @include media-breakpoint-down(md) {
@@ -141,7 +146,7 @@
 
     &__item {
         display: flex;
-        width: calm(7.5rem, 13.88vw, 12.5rem);
+        width: clamp(7.5rem, 13.88vw, 12.5rem);
         height: 5.625rem;
         flex-direction: column;
         justify-content: space-between;

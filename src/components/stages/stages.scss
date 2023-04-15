@@ -1,0 +1,64 @@
+.stages{
+    background: rgba(255, 255, 255, 0.1);
+    &__container{
+        @extend .custom-container;
+        padding: clamp(2.5rem, 5.81vw, 3.125rem) 0 clamp(2.5rem, 5.81vw, 3.125rem) 0;
+        @include media-breakpoint-up(lg){
+            padding: clamp(3.125rem, 5.55vw, 5rem) 0 clamp(3.125rem, 5.55vw, 5rem) 0;
+        }
+    }
+    &__title {
+        @extend .title;
+        margin-bottom: clamp(1.5625rem, 2.78vw, 2.5rem);
+    }
+    &__content {
+        display: grid;
+        width: 66%;
+        margin: auto;
+        gap: 0.9375rem;
+        font-size: 0.875rem;
+        line-height: 1.4438rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        @include media-breakpoint-up(md){
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+        @include media-breakpoint-up(lg){
+            gap: 2.5rem;
+            font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+            line-height: clamp(1.4438rem, 1.94vw, 1.8562rem);
+        }
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0.9375rem 2.5rem 0.9375rem 0.9375rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        cursor: pointer;
+        @include media-breakpoint-up(md){
+            padding: 0.9375rem 2.1875rem 0.9375rem 0.9375rem;
+        }
+        @include media-breakpoint-up(lg){
+            padding: clamp(0.9375rem, 2.08vw , 1.875rem) clamp(0.9375rem, 3.47vw , 3.125rem) clamp(0.9375rem, 2.08vw , 1.875rem) clamp(0.9375rem, 2.78vw , 2.5rem);
+        }
+
+        &:hover {
+            background-color: var(--button-color);
+            border: 1px solid var(--button-color);
+        }
+    }
+    &__item span {
+        position: absolute;
+        top: 5%;
+        right: 4%;
+        font-size: clamp(20px, 2.22vw, 32px);
+        line-height: 130%;
+        font-weight: 700;
+    }
+
+}

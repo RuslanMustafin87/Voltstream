@@ -1,0 +1,170 @@
+.reviews{
+    &__container {
+        position: relative;
+        @extend .custom-container;
+        padding: clamp(2.5rem, 5.81vw, 3.125rem) 0 clamp(2.5rem, 5.81vw, 3.125rem) 0;
+        @include media-breakpoint-up(lg){
+            padding: clamp(3.125rem, 5.55vw, 5rem) 0 clamp(3.125rem, 5.55vw, 5rem) 0;
+        }
+    }
+    &__title {
+        @extend .title;
+        margin-bottom: 1.875rem;
+        @include media-breakpoint-up(md){
+            float: left;
+            margin-bottom: 1.5625rem;
+        }
+        @include media-breakpoint-up(lg){
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__buttons {
+        float: right;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+    &__button-left{
+        border: none;
+        outline: none;
+        background: none;
+        opacity: .4;
+    }
+    &__button-right{
+        border: none;
+        outline: none;
+        background: none;
+    }
+    &__buttons-2 {
+        display: none;
+        margin: auto;
+        width: fit-content;
+        @include media-breakpoint-down(md){
+            display: block;
+            margin-bottom: 4.375rem;
+        }
+    }
+    &__button-left-2{
+        border: none;
+        outline: none;
+        background: none;
+        opacity: .4;
+    }
+    &__button-right-2{
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.swiper-reviews {
+    overflow: visible;
+    @include media-breakpoint-down(md){
+        margin-bottom: 1.25rem;
+    }
+    @include media-breakpoint-up(md){
+        margin-bottom: 5rem;
+    }
+    // &__wrapper {
+    //     // width: fit-content !important;
+    // }
+    &__slide {
+        width: fit-content !important;
+    }
+    &__slide picture {
+        display: block;
+    }
+    &__img {
+            display: block;
+            height: 245px;
+        @include media-breakpoint-up(lg){
+            width: 16.25rem;
+            height: 22.875rem;
+        }
+    }
+}
+
+.photos{
+
+    &__title {
+        @extend .title;
+        margin-bottom: 1.875rem;
+        @include media-breakpoint-up(md){
+            float: left;
+            margin-bottom: 1.5625rem;
+        }
+        @include media-breakpoint-up(lg){
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__buttons {
+        float: right;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+    }
+    &__button-left{
+        border: none;
+        outline: none;
+        background: none;
+        opacity: .4;
+    }
+    &__button-right{
+        border: none;
+        outline: none;
+        background: none;
+    }
+    &__buttons-2 {
+        display: none;
+        margin: auto;
+        width: fit-content;
+        @include media-breakpoint-down(md){
+            display: block;
+        }
+    }
+    &__button-left-2{
+        border: none;
+        outline: none;
+        background: none;
+        opacity: .4;
+    }
+    &__button-right-2{
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
+
+.swiper-photos {
+    overflow: visible;
+    @include media-breakpoint-down(md){
+        margin-bottom: 1.25rem;
+    }
+    &__slide {
+        width: fit-content !important;
+    }
+    &__slide picture {
+        display: block;
+    }
+    &__img {
+            display: block;
+            object-fit: cover;
+            width: min(66.6667vw, 15rem);
+            height: min(68.0556vw, 15.3125rem);
+            border-radius: 6px;
+        @include media-breakpoint-up(md){
+            width: 10.9375rem;
+            height: 10.9375rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 22.5rem;
+            height: 18.75rem;
+        }
+    }
+}

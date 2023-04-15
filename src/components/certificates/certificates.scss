@@ -1,0 +1,35 @@
+.certificates{
+    &__container {
+        @extend .custom-container;
+    }
+    &__title {
+        @extend .title;
+    }
+}
+
+.swiper-certificates {
+    overflow: visible;
+    @include media-breakpoint-down(md){
+        // margin-bottom: 1.25rem;
+    }
+    @include media-breakpoint-up(md){
+        // margin-bottom: 5rem;
+    }
+    // &__wrapper {
+    //     // width: fit-content !important;
+    // }
+    &__slide {
+        width: fit-content !important;
+    }
+    &__slide picture {
+        display: block;
+    }
+    &__img {
+            display: block;
+            // height: 245px;
+        @include media-breakpoint-up(lg){
+            // width: 16.25rem;
+            // height: 22.875rem;
+        }
+    }
+}

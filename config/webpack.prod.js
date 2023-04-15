@@ -36,9 +36,15 @@ module.exports = merge([
 						minChunks: 2,
 						enforce: true,
 					},
-					vendor: {
-						test: /node_modules/,
-						name: "vendors",
+					bootstrap: {
+						test: /bootstrap/,
+						name: "bootstrap",
+						chunks: "all",
+						enforce: true,
+					},
+					swiper: {
+						test: /swiper/,
+						name: "swiper",
 						chunks: "all",
 						enforce: true,
 					},

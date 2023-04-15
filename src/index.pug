@@ -7,15 +7,14 @@ html(lang="en")
 		title= htmlWebpackPlugin.options.title
 	body
 		.wrapper
-			.custom-container
-				include ./components/header/header.pug
-				main
-					include ./components/hero/hero.pug
-					include ./components/about-us/about-us.pug
-					section.question
-					section.stages
-					section.reviews
-					section.feedback
-					section.certificates
-					section.faq
-					section.contacts
+			include ./components/header/header.pug
+			main
+				include ./components/hero/hero.pug
+				include ./components/about-us/about-us.pug
+				include ./components/site/site.pug
+				include ./components/stages/stages.pug
+				include ./components/reviews/reviews.pug
+				include ./components/feedback/feedback.pug
+				include ./components/certificates/certificates.pug
+				section.faq
+				section.contacts

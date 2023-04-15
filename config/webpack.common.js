@@ -20,7 +20,10 @@ module.exports = {
 				use: {
 					loader: "babel-loader",
 					options: {
-						plugins: [["import", { libraryName: "bootstrap", style: true }]],
+						plugins: [
+							// ["import", { libraryName: "bootstrap", style: true }],
+							// ["import", { libraryName: "swiper", style: true }, "swiper"],
+						],
 					},
 				},
 			},
@@ -32,7 +35,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.(jpe?g|png|webp)$/,
+				test: /\.(jpe?g|png|webp|avif)$/,
 				type: "asset/resource",
 				generator: { filename: "assets/images/[name].[contenthash:8][ext]" },
 			},
@@ -56,6 +59,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: "index.html",
 			template: `${PATHS.source}/index.pug`,
+			chunks: ["index", "bootstrap"],
+			excludeChunks: ["swiper"],
 			title: "Voltstream",
 		}),
 		new FriendlyErrorsWebpackPlugin(),
