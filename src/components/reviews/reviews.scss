@@ -25,15 +25,13 @@
         }
     }
     &__button-left{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        margin-right: 2.5rem;
         opacity: .4;
     }
     &__button-right{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        opacity: 1;
     }
     &__buttons-2 {
         display: none;
@@ -45,15 +43,13 @@
         }
     }
     &__button-left-2{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        margin-right: 2.5rem;
         opacity: .4;
     }
     &__button-right-2{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        opacity: 1;
     }
 }
 
@@ -71,9 +67,6 @@
     @include media-breakpoint-up(md){
         margin-bottom: 5rem;
     }
-    // &__wrapper {
-    //     // width: fit-content !important;
-    // }
     &__slide {
         width: fit-content !important;
     }
@@ -110,15 +103,13 @@
         }
     }
     &__button-left{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        margin-right: 2.5rem;
         opacity: .4;
     }
     &__button-right{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        opacity: 1;
     }
     &__buttons-2 {
         display: none;
@@ -129,15 +120,13 @@
         }
     }
     &__button-left-2{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        margin-right: 2.5rem;
         opacity: .4;
     }
     &__button-right-2{
-        border: none;
-        outline: none;
-        background: none;
+        @extend .swiper-button;
+        opacity: 1;
     }
 }
 

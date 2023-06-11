@@ -1,16 +1,16 @@
-.certificates
+section.certificates
     .certificates__container
         h1.certificates__title Комплектующие для систем заземления и молниезащиты сертефицированны в независимых лабораториях
-        //- .swiper.swiper-certificates
-        //-     .swiper-wrapper.swiper-certificates__wrapper
-        //-         each val in [1, 2, 3, 4, 5, 2, 3, 1]
-        //-             .swiper-slide.swiper-certificates__slide
-        //-                 picture
-        //-                     source(srcset=require(`../../images/certificates-${val}.avif`) type="image/avif")
-        //-                     source(srcset=require(`../../images/certificates-${val}.webp`) type="image/webp")
-        //-                     img.swiper-certificates__img(src=require(`../../images/certificates-${val}.png`))
+        .swiper.swiper-certificates
+            .swiper-wrapper.swiper-certificates__wrapper
+                each val in [1, 2, 3, 4, 5, 2, 3, 1]
+                    .swiper-slide.swiper-certificates__slide
+                        picture
+                            source(srcset=require(`../../images/certificates-${val}.avif`) type="image/avif")
+                            source(srcset=require(`../../images/certificates-${val}.webp`) type="image/webp")
+                            img.swiper-certificates__img(src=require(`../../images/certificates-${val}.png`))
         .certificates__buttons
-            button.certificates__button-left(class="swiper-button-prev")
+            button.certificates__button-left(id="certificates-button-prev")
                 img(src=require("../../images/icons/arrow-left.svg") alt="arrow left")
-            button.certificates__button-right(class="swiper-button-next")
+            button.certificates__button-right(id="certificates-button-next")
                 img(src=require("../../images/icons/arrow-right.svg") alt="arrow right")

@@ -15,8 +15,8 @@ const swiper = new Swiper(".swiper-reviews", {
 	modules: [A11y, Navigation, FreeMode],
 	a11y: true,
 	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
+		nextEl: "#reviews-button-next",
+		prevEl: "#reviews-button-prev",
 	},
 	speed: 400,
 	freeMode: true,
@@ -54,8 +54,8 @@ const swiperPhotos = new Swiper(".swiper-photos", {
 	modules: [A11y, Navigation, FreeMode],
 	a11y: true,
 	navigation: {
-		nextEl: ".swiper-button-next-photos",
-		prevEl: ".swiper-button-prev-photos",
+		nextEl: "#photos-button-next",
+		prevEl: "#photos-button-prev",
 	},
 	speed: 400,
 	freeMode: true,

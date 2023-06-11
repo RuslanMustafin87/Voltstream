@@ -41,7 +41,8 @@
             width: 30.28%;
         }
         @include media-breakpoint-up(lg){
-            width: 33.33%;
+            // width: 33.33%;
+            width: 33.4821%;
         }
     }
     &__pic {
@@ -67,7 +68,7 @@
         }
     }
 
-    &__pic img:first-of-type{
+    &__pic img:first-child{
         display: block;
         position: absolute;
         left: -13%;
@@ -110,7 +111,7 @@
             display: none;
         }
     }
-    &__pic img:last-of-type{
+    &__pic picture {
         display: block;
         position: relative;
         height: 100%;
@@ -122,6 +123,20 @@
             height: auto;
         }
     }
+    // &__pic img:last-of-type{
+    &__pic picture img{
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        // @include media-breakpoint-up(md){
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+        //     width: 100%;
+        //     height: auto;
+        // }
+    }
 
     &__content-right{
         position: relative;
@@ -129,6 +144,11 @@
         @include media-breakpoint-up(md){
             width: 69.45%;
             padding: 3.4884vw 4.6512vw 2.907vw 1.7442vw;
+        }
+        @include media-breakpoint-up(lg){
+            // width: 33.33%;
+            width: 66.5179%;
+            padding-top: min(4.1667vw, 3.75rem);
         }
     }
 
@@ -140,6 +160,11 @@
             font-size: 2.7209vw;
             line-height: 1.95rem;
             margin-bottom: 2.907vw;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: min(2.2222vw, 2rem);
+            line-height: min(2.8889vw, 2.6rem);
+            margin-bottom: min(2.7778vw, 2.5rem);
         }
     }
 }
@@ -171,6 +196,9 @@
             flex-grow: 1;
             font-size: 1.861vw;
         }
+        @include media-breakpoint-up(lg) {
+            font-size: min(1.25vw, 1.125rem);
+        }
     }
 
     &__name::-moz-placeholder, &__phone::-moz-placeholder {
@@ -195,6 +223,9 @@
             height: 3.125rem;
             flex-grow: 1;
             font-size: 1.861vw;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: min(1.25vw, 1.125rem);
         }
     }
     &__submit:hover{

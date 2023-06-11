@@ -6,3 +6,4 @@ import "../node_modules/bootstrap/js/dist/offcanvas";
 
 import "./components/reviews/reviews";
 import "./components/certificates/certificates";
+import "./components/faq/faq";

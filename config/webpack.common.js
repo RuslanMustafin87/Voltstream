@@ -1,7 +1,7 @@
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
-// const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const PATHS = {
 	source: resolve(__dirname, "..", "src"),
@@ -19,12 +19,6 @@ module.exports = {
 				exclude: /(node_modules|dist)/,
 				use: {
 					loader: "babel-loader",
-					options: {
-						plugins: [
-							// ["import", { libraryName: "bootstrap", style: true }],
-							// ["import", { libraryName: "swiper", style: true }, "swiper"],
-						],
-					},
 				},
 			},
 			{
@@ -64,32 +58,32 @@ module.exports = {
 			title: "Voltstream",
 		}),
 		new FriendlyErrorsWebpackPlugin(),
-		// new FaviconsWebpackPlugin({
-		// 	logo: `${PATHS.source}/images/icons/brand.svg`,
-		// 	publicPath: "assets/favicons/",
-		// 	outputPath: "assets/favicons/",
-		// 	prefix: "",
-		// 	favicons: {
-		// 		appName: "Voltstream",
-		// 		start_url: "/",
-		// 		display: "standalone",
-		// 		orientation: "any",
-		// 		background: "#fff",
-		// 		theme_color: "#719dca",
-		// 		icons: {
-		// 			android: [
-		// 				"android-chrome-16x16.png",
-		// 				"android-chrome-32x32.png",
-		// 				"android-chrome-192x192.png",
-		// 				"android-chrome-512x512.png",
-		// 			],
-		// 			favicons: ["favicon-16x16.png", "favicon-32x32.png"],
-		// 			appleIcon: ["apple-touch-icon-180x180.png", "apple-touch-icon-precomposed.png", "apple-touch-icon.png"],
-		// 			appleStartup: false,
-		// 			windows: false,
-		// 			yandex: false,
-		// 		},
-		// 	},
-		// }),
+		new FaviconsWebpackPlugin({
+			logo: `${PATHS.source}/images/icons/lightning.svg`,
+			publicPath: "assets/favicons/",
+			outputPath: "assets/favicons/",
+			prefix: "",
+			favicons: {
+				appName: "Voltstream",
+				start_url: "/",
+				display: "standalone",
+				orientation: "any",
+				background: "#fff",
+				theme_color: "#F2323D",
+				icons: {
+					android: [
+						"android-chrome-16x16.png",
+						"android-chrome-32x32.png",
+						"android-chrome-192x192.png",
+						"android-chrome-512x512.png",
+					],
+					favicons: ["favicon-16x16.png", "favicon-32x32.png"],
+					appleIcon: ["apple-touch-icon-180x180.png", "apple-touch-icon-precomposed.png", "apple-touch-icon.png"],
+					appleStartup: false,
+					windows: false,
+					yandex: false,
+				},
+			},
+		}),
 	],
 };

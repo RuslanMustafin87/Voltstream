@@ -1,0 +1,120 @@
+@for $i from 1 through 6 {
+    :root{
+        --rotate-arrow-#{$i}: 180deg;
+    }
+    .faq__item-#{$i}::before{
+        transform: rotate(var(--rotate-arrow-#{$i}));
+    }
+}
+
+.faq{
+
+    background: rgba(255, 255, 255, 0.1);
+
+    &__container {
+        @extend .custom-container;
+        position: relative;
+        padding: min(11.11vw, 2.5rem) 0 min(11.11vw, 2.5rem) 0;
+        @include media-breakpoint-up(md){
+            padding: min(5.814vw, 3.125rem) 0 min(5.814vw, 3.125rem) 0;
+        }
+        @include media-breakpoint-up(lg){
+            padding: min(5.556vw, 5rem) 0 min(6.945vw, 6.25rem) 0;
+        }
+    }
+    &__title {
+        @extend .title;
+        margin-bottom: 0.625rem;
+        @include media-breakpoint-up(md){
+            margin-bottom: 1.5625rem;
+        }
+        @include media-breakpoint-up(lg){
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md){
+            flex-direction: row;
+            gap: 1.5625rem
+        }
+        @include media-breakpoint-up(lg){
+            gap: 2.5rem;
+        }
+    }
+    &__content-left {
+        width: 100%;
+        flex-grow: 1;
+        @include media-breakpoint-up(md){
+            width: 50%;
+        }
+    }
+    &__content-right {
+        width: 100%;
+        flex-grow: 1;
+        @include media-breakpoint-up(md){
+            width: 50%;
+        }
+    }
+    &__item {
+        display: block;
+        position: relative;
+        margin-bottom: 0.9375rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        padding: 1rem 2.625rem 1rem 1rem;
+        cursor: pointer;
+        @include media-breakpoint-up(md){
+            padding: 1.25rem 3.125rem 1.25rem 1.25rem;
+        }
+        @include media-breakpoint-up(lg){
+            margin-bottom: 1.25rem;
+            padding: 1.875rem 4.875rem 1.875rem 1.875rem;
+        }
+    }
+    &__item::before {
+        content: '';
+        position: absolute;
+        top: 1.25rem;
+        right: 1.125rem;
+        background: url(./images/icons/arrow.svg) no-repeat;
+        width: 0.6025rem;
+        height: 0.3681rem;
+        transition: .3s linear;
+    }
+
+    &__question {
+        font-size: 0.7031rem;
+        line-height: 0.8037rem;
+        @include media-breakpoint-up(md){
+            font-size: 0.86rem;
+            line-height: 0.9825rem;
+        }
+        @include media-breakpoint-up(lg){
+            font-size: 1.3125rem;
+            line-height: 1.5rem;
+        }
+    }
+    &__answer {
+        font-size: 9.64px;
+        line-height: 170%;
+        @include media-breakpoint-up(md){
+            font-size: 0.7362rem;
+        }
+        @include media-breakpoint-up(lg){
+            font-size: 1.125rem;
+        }
+    }
+    &__answer::before {
+        content: "";
+        display: block;
+        height: 0.625rem;
+        @include media-breakpoint-up(md){
+            height: 0.7362rem;
+        }
+        @include media-breakpoint-up(lg){
+            height: 1.125rem;
+        }
+    }
+}

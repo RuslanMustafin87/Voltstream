@@ -1,0 +1,89 @@
+.footer {
+	height: 160.67vw;
+	position: relative;
+	@include media-breakpoint-up(md) {
+		height: 51.163vw;
+	}
+	@include media-breakpoint-up(lg) {
+		// height: min(41.667vw, 37.5rem);
+		height: 37.5rem;
+	}
+	&__container {
+		@extend .custom-container;
+	}
+	&__map {
+		width: 100%;
+		height: 38.333%;
+		background: url(./images/map.png) no-repeat;
+		background-position: center;
+		background-size: cover;
+		@include media-breakpoint-up(md) {
+			height: 100%;
+		}
+	}
+	&__contacts {
+		width: 100%;
+		height: 61.667%;
+		background-color: #fdfdfd;
+		padding: 11vw 8.333vw 0 8.333vw;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 11.36%;
+			left: 1.977%;
+			height: 75.55%;
+			width: 48.84%;
+			padding: 3.5vw;
+		}
+		@include media-breakpoint-up(lg) {
+			top: 13.3333%;
+			left: 5.555%;
+			width: min(35.42%, 31.875rem);
+			height: 73.33%;
+			padding: min(4.167%, 3.75rem);
+		}
+	}
+	&__title {
+		@extend .title;
+		color: #333;
+		text-align: center;
+		margin-bottom: min(4.4167vw, 15px);
+	}
+	&__address {
+		color: #4f4f4f;
+		text-align: center;
+		margin-bottom: min(6.945vw, 25px);
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+	&__address p:first-child,
+	&__address p:nth-child(2) {
+		font-size: min(5.555vw, 1.25rem);
+		line-height: min(8.889vw, 2rem);
+	}
+	&__address p:nth-child(3) {
+		margin-bottom: min(3.333vw, 0.75rem);
+		font-size: min(4.445vw, 1rem);
+		line-height: min(7.111vw, 1.6rem);
+	}
+}
+
+.social {
+	text-align: center;
+	display: flex;
+	& a:first-child {
+		display: block;
+		margin-left: auto;
+		margin-right: 2.1875rem;
+		cursor: pointer;
+		@include media-breakpoint-up(md) {
+			margin-left: 0;
+		}
+	}
+	& a:last-child {
+		display: block;
+		margin-right: auto;
+		cursor: pointer;
+
+    }
+}
